@@ -42,10 +42,6 @@ function msmove() {
 		};
 		ss[ind].style.top = 300 - indss * 140;
 		console.log(ind + " " + indss);
-		if (ind = 7, indss = 0) {
-			document.querySelector(".color-b").style.transform = "rotateY(0deg)";
-			document.querySelector(".color-fr").style.transform = "rotateY(180deg)"
-		}
 		for (i = 0; i < sb.length; i++) {
 			sb[i].style.marginTop = "0";
 			sb[i].querySelector(".second-slider__icon").style.opacity = "0.8";
@@ -79,7 +75,6 @@ function msmove() {
 	}
 	function onWheel(e) {
 		delta = e.deltaY || e.detail || e.wheelDelta;
-		deltax = e.deltaX; //|| e.detail || e.wheelDelta;
 		if (sb.length > 1) {
 			if (indss < 1) {
 				if (delta > 0) { scrl++; indss++ }
@@ -103,9 +98,6 @@ function msmove() {
 			sb[indss].querySelector(".second-slider__icon").style.transform = "scale(1.3)";
 			sb[indss].firstElementChild.style.marginRight = "50px";
 		}
-		if (deltax > 0) {ind++};
-		if (deltax < 0) {ind--};
-		ms.style.left = 300 - ind * 200;
 	}
 }
 
